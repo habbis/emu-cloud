@@ -30,7 +30,7 @@ def get_config():
 #def mysql_connection(db_host,db_port,db_user,db_password,database):
 def mysql_connection():
    config = get_config()
-   mydb = mysql.connect(host=config[0],port=db_port,user=f"{db_user}",password=f"{db_password}",database=f"{database}")
+   mydb = mysql.connect(host=config[0],port=config[1],user=,password=f"{db_password}",database=f"{database}")
    return mydb
 
 
