@@ -1,6 +1,6 @@
 -- MySQL dump 10.19  Distrib 10.3.39-MariaDB, for Linux (x86_64)
 --
--- Host: mysql2.no.habbfarm.net    Database: tiger_cloud
+-- Host: mysql2.no.habbfarm.net    Database: emu_cloud
 -- ------------------------------------------------------
 -- Server version	8.0.23
 
@@ -27,8 +27,6 @@ CREATE TABLE `host2hostgroup` (
   `id_hosts` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `id_hostgroup` int DEFAULT NULL,
   `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `srcprog` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `srcuser` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id_hostgroup` (`id_hostgroup`),
   KEY `id_hosts` (`id_hosts`)
@@ -118,7 +116,6 @@ CREATE TABLE `vlan` (
   `prefix` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_danish_ci NOT NULL,
   `comment` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `zone` varchar(4) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `system_no` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_danish_ci DEFAULT NULL,
   `state` enum('new','present','absent') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
