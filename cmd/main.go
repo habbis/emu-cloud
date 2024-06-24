@@ -68,7 +68,7 @@ func Get_vlan(conn *gin.Context) {
 	var (
 		id_vlan int
 		site    string
-		vlan_id string
+		vlan_id int
 		name    string
 		prefix  string
 		comment string
