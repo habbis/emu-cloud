@@ -94,7 +94,7 @@ func Get_vlan(conn *gin.Context) {
 		}
 
 		var vlan = []Vlan{
-			{Id: id_vlan, Site: site, Vlan_id: 22, Name: name, prefix: prefix, Comment: comment, Zone: zone, State: state},
+			{Id: id_vlan, Site: site, Vlan_id: vlan_id, Name: name, prefix: prefix, Comment: comment, Zone: zone, State: state},
 		}
 
 		//conn.IndentedJSON(http.StatusOK, vlan)
