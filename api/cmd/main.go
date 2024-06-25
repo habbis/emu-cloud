@@ -97,7 +97,6 @@ func Get_vlan(conn *gin.Context) {
 			{Id: id_vlan, Site: site, Vlan_id: vlan_id, Name: name, prefix: prefix, Comment: comment, Zone: zone, State: state},
 		}
 
-		//conn.IndentedJSON(http.StatusOK, vlan)
 		conn.PureJSON(http.StatusOK, vlan)
 
 	}

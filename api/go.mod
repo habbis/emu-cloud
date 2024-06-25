@@ -1,4 +1,4 @@
-module emu-cloud
+module  github.com/habbis/emu-cloud/api
 
 go 1.22
 
