@@ -1,4 +1,2 @@
-fastapi==0.111.0
-fastapi-cli==0.0.4
-mysqlclient==2.2.4
-streamlit==1.35.0
+streamlit
+requests
