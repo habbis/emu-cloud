@@ -12,6 +12,7 @@ type Json_config struct {
 	Pve_host     string
 	Pve_api_user string
 	Pve_api_key  string
+	Pve_tempalte int
 }
 
 type Clone_vm struct {
@@ -34,6 +35,7 @@ func main() {
 	var json_payload Json_config
 	err = json.Unmarshal(content, &json_payload)
 
+	pve_clone_api := fmt.Sprintf("%s/api2/json/nodes/hf-pve7/qemu/%d/clone", json_payload.Pve_tempalte, json_payload.Pve_tempalte)
 	pve_api_creds := fmt.Sprintf("PVEAPIToken=%s=%s", json_payload.Pve_api_user, json_payload.Pve_api_key)
 
 	data := Clone_vm{
@@ -51,7 +53,7 @@ func main() {
 		SetHeader("Accept", "application/json").
 		SetHeader("Authorization", pve_api_creds).
 		SetBody(&data).
-		Post("https://hf-pve7.no.habbfarm.net:8006/api2/json/nodes/hf-pve7/qemu/3000/clone")
+		Post(pve_clone_api)
 	if err != nil {
 		log.Fatal(err)
 	}

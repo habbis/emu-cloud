@@ -1,5 +1,6 @@
 {
   "pve_host": "https://pve.local.net:8006",
   "pve_api_user": "youruser@pve!yourtokenname",
-  "pve_api_key": "yourapikey"
+  "pve_api_key": "yourapikey",
+  "pve_template": 4000
 }
