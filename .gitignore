@@ -2,7 +2,7 @@ emu-cloud/.config.json
 vm/.config.json
 api/.config.json
 web/.config.json
-.config.jsonp
+.config.json
 
 
 # Byte-compiled / optimized / DLL files
