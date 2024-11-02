@@ -1,5 +1,8 @@
 emu-cloud/.config.json
 .config.json
+.idea
+api/.config.json
+api/venv
 
 
 # Byte-compiled / optimized / DLL files
