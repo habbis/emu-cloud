@@ -42,7 +42,6 @@ class interface(Base):
 
 # examole vlan name
 # int_22_test_dc1
-
 class interface(Base):
     __tablename__ = "interface"
     id = Column(Integer, primary_key=True, index=True)
